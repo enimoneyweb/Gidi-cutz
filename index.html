@@ -6,11 +6,13 @@
 
   <meta
     name="description"
-    content="GIDI CUTS — Premium barbershop in Yaba, Lagos. Skin fades, dreads, tapers and clean cuts."
+    content="GIDI CUTS — Premium barbershop in Yaba, Lagos. Clean fades, tapers, dreads and professional grooming."
   >
 
   <meta name="theme-color" content="#080808">
+  <meta name="color-scheme" content="dark">
 
+  <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="stylesheet" href="css/index.css">
 
   <title>GIDI CUTS — Stay Sharp. Stay Fresh.</title>
@@ -22,11 +24,13 @@
 
   <header class="navbar">
 
-    <a href="#home" class="logo">
-      <span>✂</span> GIDI CUTS
+    <a href="#home" class="logo" aria-label="GIDI CUTS home">
+      <span aria-hidden="true">✂</span>
+      GIDI CUTS
     </a>
 
-    <nav class="nav-links" id="navLinks">
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+
       <a href="#gallery">Cuts</a>
       <a href="#prices">Prices</a>
       <a href="#reviews">Reviews</a>
@@ -35,32 +39,39 @@
       <a href="#book" class="btn-gold nav-book">
         Book Now
       </a>
+
     </nav>
 
     <button
       class="hamburger"
       id="menuBtn"
+      type="button"
       aria-label="Open navigation menu"
       aria-expanded="false"
+      aria-controls="navLinks"
     >
-      ☰
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
 
   </header>
 
 
-  <!-- ================= HERO ================= -->
+  <!-- ================= MAIN ================= -->
 
   <main>
+
+    <!-- ================= HERO ================= -->
 
     <section class="hero" id="home">
 
       <div class="hero-glow"></div>
 
-      <div class="hero-content">
+      <div class="hero-content reveal-on-load">
 
         <div class="badge">
-          <span class="pulse"></span>
+          <span class="pulse" aria-hidden="true"></span>
           TRENDING IN YABA
           <span class="rating">4.9 ★</span>
         </div>
@@ -85,12 +96,12 @@
 
           <a href="#book" class="btn-gold">
             Book Your Cut
-            <span>→</span>
+            <span aria-hidden="true">→</span>
           </a>
 
           <a href="#gallery" class="btn-outline">
             Explore Cuts
-            <span>↗</span>
+            <span aria-hidden="true">↗</span>
           </a>
 
         </div>
@@ -117,17 +128,20 @@
       </div>
 
 
-      <div class="hero-image-wrapper">
+      <div class="hero-image-wrapper reveal-on-load">
 
         <div class="hero-image">
 
           <img
-            src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200"
-            alt="Professional barber cutting a client's hair"
+            src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&q=85"
+            alt="Professional barber working on a client's haircut"
+            fetchpriority="high"
           >
 
+          <div class="hero-image-shine"></div>
+
           <div class="live-status">
-            <span></span>
+            <span aria-hidden="true"></span>
             OPEN NOW
             <small>2 barbers available</small>
           </div>
@@ -135,12 +149,14 @@
         </div>
 
         <div class="floating-card">
-          <span class="scissors">✂</span>
+
+          <span class="scissors" aria-hidden="true">✂</span>
 
           <div>
             <strong>GIDI CUTS</strong>
             <small>Yaba, Lagos</small>
           </div>
+
         </div>
 
       </div>
@@ -150,7 +166,7 @@
 
     <!-- ================= MARQUEE ================= -->
 
-    <div class="marquee">
+    <div class="marquee" aria-hidden="true">
 
       <div class="marquee-track">
 
@@ -165,6 +181,10 @@
         <span>FRESH CUTS</span>
         <b>✦</b>
         <span>CLEAN FADES</span>
+        <b>✦</b>
+        <span>PREMIUM STYLE</span>
+        <b>✦</b>
+        <span>GIDI CUTS</span>
         <b>✦</b>
 
       </div>
@@ -193,70 +213,81 @@
 
         <article class="gallery-card large">
           <img
-            src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=900"
+            src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=900&q=85"
             alt="Skin fade haircut"
             loading="lazy"
           >
+
           <div class="gallery-overlay">
             <span>01</span>
             <strong>Skin Fade</strong>
           </div>
         </article>
 
+
         <article class="gallery-card">
           <img
-            src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=700"
+            src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=700&q=85"
             alt="Dread hairstyle"
             loading="lazy"
           >
+
           <div class="gallery-overlay">
             <span>02</span>
             <strong>Dreads Twist</strong>
           </div>
         </article>
 
+
         <article class="gallery-card">
           <img
-            src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=700"
+            src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=700&q=85"
             alt="Beard grooming"
             loading="lazy"
           >
+
           <div class="gallery-overlay">
             <span>03</span>
             <strong>Beard Gang</strong>
           </div>
         </article>
 
+
         <article class="gallery-card">
           <img
-            src="https://images.unsplash.com/photo-1622286342621-4bd786c0917c?w=700"
+            src="https://images.unsplash.com/photo-1622286342621-4bd786c0917c?w=700&q=85"
             alt="Afro haircut"
             loading="lazy"
           >
+
           <div class="gallery-overlay">
             <span>04</span>
             <strong>Afro Line</strong>
           </div>
         </article>
 
+
         <article class="gallery-card tall">
           <img
-            src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900"
+            src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=85"
             alt="Signature barber cut"
             loading="lazy"
           >
+
           <div class="gallery-overlay">
             <span>05</span>
             <strong>Signature Cut</strong>
           </div>
         </article>
 
+
         <article class="gallery-card">
           <img
-            src="https://images.unsplash.com/photo-1585747860715-2ba37e788b9e?w=700"
+            src="https://images.unsplash.com/photo-1585747860715-2ba37e788b9e?w=700&q=85"
             alt="Clean haircut"
             loading="lazy"
           >
+
           <div class="gallery-overlay">
             <span>06</span>
             <strong>Clean Cut</strong>
@@ -296,7 +327,7 @@
           <h3>Clean Cut</h3>
 
           <p>
-            Normal haircut with a sharp line-up.
+            A sharp haircut with a clean line-up and finishing touch.
           </p>
 
           <strong class="price">
@@ -321,7 +352,7 @@
           <h3>Dreads + Fade</h3>
 
           <p>
-            Retwist, skin fade and finishing oil.
+            Retwist, skin fade and finishing oil for a complete look.
           </p>
 
           <strong class="price">
@@ -342,7 +373,7 @@
           <h3>Taper Fade</h3>
 
           <p>
-            Clean taper, beard shaping and finishing.
+            Clean taper, beard shaping and professional finishing.
           </p>
 
           <strong class="price">
@@ -404,7 +435,9 @@
 
         <article class="review-card">
 
-          <div class="stars">★★★★★</div>
+          <div class="stars" aria-label="5 out of 5 stars">
+            ★★★★★
+          </div>
 
           <p>
             "Sharpest fade in Yaba. My guy really knows
@@ -412,12 +445,14 @@
           </p>
 
           <div class="review-author">
+
             <div class="avatar">T</div>
 
             <div>
               <strong>Tunde</strong>
               <span>UNILAG</span>
             </div>
+
           </div>
 
         </article>
@@ -425,7 +460,9 @@
 
         <article class="review-card">
 
-          <div class="stars">★★★★★</div>
+          <div class="stars" aria-label="5 out of 5 stars">
+            ★★★★★
+          </div>
 
           <p>
             "Booked through WhatsApp and didn't have
@@ -433,12 +470,14 @@
           </p>
 
           <div class="review-author">
+
             <div class="avatar">D</div>
 
             <div>
               <strong>David</strong>
               <span>Yaba</span>
             </div>
+
           </div>
 
         </article>
@@ -446,7 +485,9 @@
 
         <article class="review-card">
 
-          <div class="stars">★★★★★</div>
+          <div class="stars" aria-label="5 out of 5 stars">
+            ★★★★★
+          </div>
 
           <p>
             "My dreads have never looked this fresh.
@@ -454,12 +495,14 @@
           </p>
 
           <div class="review-author">
+
             <div class="avatar">C</div>
 
             <div>
               <strong>Collins</strong>
               <span>Lekki</span>
             </div>
+
           </div>
 
         </article>
@@ -500,7 +543,7 @@
 
             <div>
               <span>✓</span>
-              No unnecessary waiting
+              Simple booking process
             </div>
 
             <div>
@@ -524,7 +567,10 @@
             <input
               type="text"
               id="name"
+              name="name"
               placeholder="Enter your name"
+              autocomplete="name"
+              maxlength="60"
               required
             >
 
@@ -536,7 +582,11 @@
             <input
               type="tel"
               id="phone"
+              name="phone"
               placeholder="08012345678"
+              autocomplete="tel"
+              inputmode="tel"
+              maxlength="20"
               required
             >
 
@@ -545,7 +595,7 @@
               Choose your cut
             </label>
 
-            <select id="style" required>
+            <select id="style" name="style" required>
 
               <option value="">
                 Select a style
@@ -573,6 +623,7 @@
             <input
               type="date"
               id="date"
+              name="date"
               required
             >
 
@@ -582,13 +633,13 @@
               class="btn-gold submit-btn"
             >
               Confirm on WhatsApp
-              <span>→</span>
+              <span aria-hidden="true">→</span>
             </button>
 
           </form>
 
           <p class="form-note">
-            You'll be redirected to WhatsApp to confirm your booking.
+            Your booking request will open in WhatsApp.
           </p>
 
         </div>
@@ -623,12 +674,12 @@
           <div class="location-details">
 
             <div>
-              <span>📍</span>
+              <span aria-hidden="true">📍</span>
               <strong>Yaba, Lagos</strong>
             </div>
 
             <div>
-              <span>🕘</span>
+              <span aria-hidden="true">🕘</span>
               <strong>9AM — 9PM Daily</strong>
             </div>
 
@@ -636,7 +687,7 @@
 
           <a
             href="https://wa.me/2348129989266"
-            class="btn-gold"
+            class="btn-gold location-button"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -651,7 +702,7 @@
           <iframe
             src="https://maps.google.com/maps?q=Yaba%20Lagos&t=&z=13&ie=UTF8&iwloc=&output=embed"
             loading="lazy"
-            title="GIDI CUTS location map"
+            title="Map showing GIDI CUTS in Yaba, Lagos"
           ></iframe>
 
         </div>
@@ -678,7 +729,8 @@
   <footer class="footer">
 
     <div class="footer-logo">
-      <span>✂</span> GIDI CUTS
+      <span aria-hidden="true">✂</span>
+      GIDI CUTS
     </div>
 
     <p>
@@ -686,13 +738,15 @@
     </p>
 
     <div class="footer-links">
+
       <a href="#home">Home</a>
       <a href="#gallery">Cuts</a>
       <a href="#prices">Prices</a>
       <a href="#book">Book</a>
+
     </div>
 
-    <small>
+    <small id="footerYear">
       © 2026 GIDI CUTS • Built by Enimoney
     </small>
 
